@@ -1,0 +1,26 @@
+<svg width="1024" height="150" viewBox="0 0 1024 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Define uma máscara de recorte -->
+  <defs>
+    <clipPath id="metade-superior">
+      <rect width="1024" height="75" x="0" y="0"/>
+    </clipPath>
+  </defs>
+  
+  <!-- Retângulo azul (metade superior) -->
+  <rect width="1024" height="75" rx="30" fill="#0C70F2"/>
+  
+  <!-- Retângulo branco (metade inferior) -->
+  <rect width="1024" height="75" rx="30" fill="white" transform="translate(0, 75)"/>
+  
+  <!-- Aplica a máscara de recorte à metade superior da imagem -->
+  <g clip-path="url(#metade-superior)">
+    <!-- Texto "Logradouro/nome" -->
+    <text x="20" y="50%" fill="white" font-size="20" dominant-baseline="middle" dy="-30">Logradouro/nome</text>
+
+    <!-- Texto "Bairro/Distrito" -->
+    <text x="50%" y="50%" fill="white" font-size="20" dominant-baseline="middle" text-anchor="middle" dy="-30">Bairro/Distrito</text>
+
+    <!-- Texto "Localidade/UF" -->
+    <text x="1004" y="50%" fill="white" font-size="20" dominant-baseline="middle" text-anchor="end" dy="-30">Localidade/UF</text>
+  </g>
+</svg>

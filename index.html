@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Site</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Seu CSS existente */
+        #container-background {
+            background: rgba(12, 112, 242, 1);
+            width: 100%;
+            height: 53px;
+            gap: 0px;
+            opacity: 0px;
+        }
+        #DncWeather {
+            width: 310px;
+            height: 61px;
+            top: 0px;
+            left: 56px;
+            gap: 0px;
+            opacity: 0px;
+            font-family: Inter;
+            font-size: 30px;
+            font-weight: 800;
+            line-height: 60.51px;
+            text-align: left;
+            color: white;
+        }
+        #Endereços {
+            width: 132px;
+            height: 30px;
+            top: 12px;
+            left: 433px;
+            gap: 0px;
+            opacity: 0px;
+            font-family: Inter;
+            font-size: 25px;
+            font-weight: 800;
+            line-height: 30.26px;
+            text-align: left;
+            color: aliceblue;
+        }
+        #Previsão {
+            width: 229px;
+            height: 30px;
+            top: 12px;
+            left: 210px;
+            gap: 0px;
+            opacity: 0px;
+            font-family: Inter;
+            font-size: 25px;
+            font-weight: 800;
+            line-height: 30.26px;
+            text-align: left;
+            color: aliceblue;
+        }
+        #texto_superior {
+            width: 879px;
+            height: 282px;
+            margin-top: 226px;
+            margin-left: 254px;
+            gap: 0px;
+            opacity: 0px;
+            font-family: Inter;
+            font-size: 40px;
+            font-weight: 800;
+            line-height: 40px;
+            text-align: left;
+        }
+        #nuvens {
+            margin-left: 800px;
+            margin-top: -700px;
+        }
+        #quadroforms {
+            display: block;
+            margin: 0 auto;
+            margin-top: -100px;
+            width: 700px;
+            height: 830px;
+            top: 635px;
+            left: 395px;
+            gap: 0px;
+            border-radius: 30px 30px 30px 30px;
+            opacity: 0px;
+        }
+        #formnome {
+            margin-top: -700px;
+        }
+        #botaoacessar {
+            width: 483px;
+        }
+        #barraderesltado {
+            margin-top: 800px;
+        }
+        #textresultado {
+            margin-left: 220px;
+            margin-right: auto;
+            max-width: fit-content;
+        }
+        #pointlocal {
+            margin-left: 780px;
+            margin-top: -132px;
+        }
+        #barra_resultado {
+            width: 900px;
+            margin-left: 200px;
+            margin-right: auto;
+            max-width: fit-content;
+        }
+        #previsao {
+            margin-left: 220px;
+            margin-right: auto;
+            max-width: fit-content;
+        }
+        #nuvem_inferior {
+            margin-left: 780px;
+            margin-top: -117px;
+        }
+        #barra_anuncio {
+            margin-left: 201px;
+            margin-right: auto;
+            max-width: fit-content;
+        }
+        #container_previsao {
+            margin-top: 200px;
+        }
+        #formulario .form-control {
+            background-color: rgba(242, 242, 242, 0.9);
+        }
+        #barra_final_azul {
+            margin-top: 200px;
+            width: 100%;
+        }
+        #termos_privacidade {
+            margin-top: -40px;
+            font-weight: bold;
+            margin-left: 950px;
+        }
+        #form1 {
+            margin-left: 500px;
+            margin-top: -600px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        #form1 {
+            width: 600px;
+            height: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 550px;
+            display: block;
+            margin-top: 100px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        #PrimeiroNome {
+            margin-left: 100px;
+        }
+        #E-mail {
+            margin-left: 100px;
+        }
+        #CEP {
+            margin-left: 100px;
+        }
+        #Latitude {
+            margin-left: 20px;
+            margin-top: 200px;
+        }
+        #Longitude {
+            margin-left: 300px;
+            margin-bottom: 100px;
+        }
+        #enviar {
+            margin-left: 100px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body style="background-color: rgba(186, 186, 186, 1);"> 
+    <div id="container-background"> 
+        <div class="row">
+            <div id="DncWeather" class="col">
+                DncWeather
+            </div>
+            <div id="Endereços" class="col">
+                <!-- As informações do endereço serão inseridas aqui dinamicamente -->
+            </div>
+            <div id="Previsão" class="col">
+                Previsão
+            </div>
+        </div>
+    </div>
+    <h1 id="texto_superior">Descubra Mais com Precisão: <br> Previsões do Tempo e endereços <br> em tempo real.</h1>
+    <img id="nuvens" src="imgs.svg/nuvens.svg" alt="">
+    <form id="formulario">
+        <div id="form1">
+            <div id="PrimeiroNome">
+                <label>Primeiro Nome: <input type="text" id="primeiroNome" name="Primeiro Nome" required /></label>
+            </div>
+            <div id="E-mail">
+                <label>E-mail: <input type="text" id="email" name="E-mail" required /></label>
+            </div>
+            <div id="CEP">
+                <label>CEP: <input type="text" id="cep" name="CEP" required /></label>
+            </div>
+            <div id="Latitude">
+                <label>Latitude: <input type="text" id="latitude" name="Latitude" required /></label>
+            </div> 
+            <div id="Longitude">
+                <label>Longitude: <input type="text" id="longitude" name="Longitude" required /></label>
+            </div>
+            <input type="submit" value="Enviar">
+        </div>
+    </form>
+    <div id="barraderesltado">
+        <h1 id="textresultado">Resultado da busca por CEP:</h1> 
+        <img id="pointlocal" src="imgs.svg/pointlocal.svg" alt="">
+        <img id="barra_resultado" src="imgs.svg/barra_resultado.svg" alt="">
+    </div>
+    <div id="container_previsao">
+        <h1 id="previsao">Previsão do tempo na região:</h1> 
+        <img id="nuvem_inferior" src="imgs.svg/nuvem_inferior.svg" alt="">
+        <img id="barra_anuncio" src="imgs.svg/ununcio_previsao.svg" alt="">
+        <img id="barra_final_azul" src="imgs.svg/barra_final_azul.svg" alt=""> 
+        <p id="termos_privacidade">Termos de Uso | Política de Privacidade</p>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const enderecoElement = document.getElementById('Endereços');
+            const previsaoElement = document.getElementById('previsao');
+            const formulario = document.getElementById('formulario');
+            
+            formulario.addEventListener('submit', function(event) {
+                event.preventDefault(); // Evita o comportamento padrão de envio do formulário
+
+                const cep = document.getElementById('cep').value;
+                const latitude = document.getElementById('latitude').value;
+                const longitude = document.getElementById('longitude').value;
+
+                // Obter endereço com o CEP
+                fetch(`https://viacep.com.br/ws/${cep}/json/`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.erro) {
+                            alert('CEP inválido. Por favor, tente novamente.');
+                        } else {
+                            enderecoElement.innerText = `Bairro: ${data.bairro}, Localidade: ${data.localidade}, UF: ${data.uf}`;
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Erro ao obter endereço:', error);
+                        alert('Erro ao obter endereço. Por favor, tente novamente mais tarde.');
+                    });
+
+                // Obter previsão do tempo com latitude e longitude
+                fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.hourly && data.hourly.temperature_2m) {
+                            const temperatura = data.hourly.temperature_2m[0];
+                            previsaoElement.innerText = `Temperatura: ${temperatura}°C`;
+                        } else {
+                            console.error('Resposta inválida da API Open-Meteo:', data);
+                            alert('Erro ao obter temperatura. Por favor, tente novamente mais tarde.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Erro ao obter temperatura:', error);
+                        alert('Erro ao obter temperatura. Por favor, verifique as coordenadas e tente novamente.');
+                    });
+            });
+        });
+    </script>
+</body>
+</html>
